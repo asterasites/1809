@@ -694,91 +694,10 @@ opacity:0;
 
 
 }
-/* Album uspomena 📸❤️ */
-
-
-.album {
-
-text-align:center;
-
-}
-
-
-
-.album input {
-
-width:280px;
-
-padding:15px;
-
-border-radius:30px;
-
-border:none;
-
-font-size:18px;
-
-text-align:center;
-
-margin:20px;
-
-}
-
-
-
-.album button {
-
-
-padding:16px 40px;
-
-border:none;
-
-border-radius:40px;
-
-background:#ff5c9d;
-
-color:white;
-
-font-size:20px;
-
-cursor:pointer;
-
-box-shadow:0 0 25px rgba(255,80,150,0.6);
-
-transition:0.4s;
-
-
-}
-
-
-
-.album button:hover {
-
-transform:scale(1.1);
-
-}
-
-
-
-
-#wrongPassword {
-
-color:#ff9fc8;
-
-font-size:20px;
-
-margin-top:20px;
-
-}
-
-
+/* Privatni album 📸🔒 */
 
 
 #gallery {
-
-
-display:none;
-
-margin-top:40px;
 
 display:flex;
 
@@ -788,9 +707,24 @@ gap:25px;
 
 flex-wrap:wrap;
 
+margin-top:40px;
+
+transition:1s;
 
 }
 
+
+
+/* dok je zaključan */
+
+#gallery.locked img {
+
+
+filter:blur(15px);
+
+transform:scale(1.05);
+
+}
 
 
 
@@ -808,7 +742,7 @@ border-radius:20px;
 box-shadow:
 0 0 25px rgba(255,100,170,0.5);
 
-transition:0.5s;
+transition:0.8s;
 
 
 }
@@ -818,7 +752,23 @@ transition:0.5s;
 #gallery img:hover {
 
 
-transform:scale(1.08) rotate(2deg);
+transform:scale(1.08);
+
+}
+
+
+
+
+/* kada se otključa */
+
+
+#gallery.unlocked img {
+
+
+filter:blur(0);
+
+
+transform:scale(1);
 
 
 }
