@@ -274,3 +274,58 @@ item.remove();
 
 
 }
+// Album sa lozinkom ❤️📸
+
+
+function openAlbum(){
+
+
+let password =
+document.getElementById("albumPassword").value;
+
+
+let gallery =
+document.getElementById("gallery");
+
+
+let message =
+document.getElementById("wrongPassword");
+
+
+
+if(password === "1809mojesve"){
+
+
+gallery.style.display="flex";
+
+message.innerHTML="❤️ Album otvoren ❤️";
+
+
+}
+
+else{
+
+
+message.innerHTML="❌ Pogrešna lozinka";
+
+
+}
+
+
+}
+
+
+
+// Sakrivanje slika koje ne postoje
+
+document.querySelectorAll("#gallery img").forEach(img=>{
+
+
+img.onerror=function(){
+
+this.style.display="none";
+
+};
+
+
+});
