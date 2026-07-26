@@ -949,3 +949,158 @@ box-shadow:
 
 
 }
+/* Mesec 🌙 */
+
+.moon {
+
+position:fixed;
+
+top:35px;
+
+right:50px;
+
+font-size:70px;
+
+filter:drop-shadow(0 0 25px #fff);
+
+z-index:-1;
+
+animation:moonGlow 4s infinite alternate;
+
+}
+
+
+@keyframes moonGlow {
+
+from {
+
+filter:drop-shadow(0 0 15px white);
+
+}
+
+
+to {
+
+filter:drop-shadow(0 0 45px #ffb6d9);
+
+}
+
+}
+
+
+
+/* Zvezde koje trepere ⭐ */
+
+.stars::before,
+.stars::after {
+
+content:"✦  ✧  ✦   ✧    ✦     ✧";
+
+position:absolute;
+
+width:100%;
+
+height:100%;
+
+font-size:25px;
+
+color:white;
+
+letter-spacing:100px;
+
+line-height:120px;
+
+animation:twinkle 3s infinite alternate;
+
+}
+
+
+
+@keyframes twinkle {
+
+from {
+
+opacity:0.3;
+
+}
+
+
+to {
+
+opacity:1;
+
+}
+
+}
+
+
+
+/* Zvezda padalica ☄️ */
+
+.shooting-star {
+
+position:fixed;
+
+top:20%;
+
+left:-100px;
+
+width:120px;
+
+height:3px;
+
+background:linear-gradient(90deg,transparent,white);
+
+border-radius:50%;
+
+transform:rotate(-30deg);
+
+opacity:0;
+
+z-index:-1;
+
+animation:shoot 8s infinite;
+
+}
+
+
+
+@keyframes shoot {
+
+
+0% {
+
+left:-150px;
+
+top:20%;
+
+opacity:0;
+
+}
+
+
+10% {
+
+opacity:1;
+
+}
+
+
+25% {
+
+left:80%;
+
+top:50%;
+
+opacity:0;
+
+}
+
+
+100% {
+
+opacity:0;
+
+}
+
+}
