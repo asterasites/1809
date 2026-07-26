@@ -1104,3 +1104,179 @@ opacity:0;
 }
 
 }
+/* Završna scena ❤️ */
+
+
+.final-love {
+
+text-align:center;
+
+padding:80px 30px;
+
+margin-top:100px;
+
+background:
+rgba(255,255,255,0.08);
+
+border-radius:30px;
+
+animation:finalAppear 3s;
+
+}
+
+
+
+.final-love p {
+
+font-size:22px;
+
+line-height:2;
+
+}
+
+
+
+.future-message {
+
+margin-top:80px;
+
+padding:40px;
+
+border-radius:30px;
+
+background:rgba(255,120,180,0.12);
+
+box-shadow:
+
+0 0 40px rgba(255,100,170,0.3);
+
+}
+
+
+
+/* Završni potpis */
+
+
+.ending {
+
+margin-top:100px;
+
+}
+
+
+
+.ending h1 {
+
+font-size:90px;
+
+color:#ff8fc1;
+
+font-family:"Brush Script MT",
+"Segoe Script",
+cursive;
+
+text-shadow:
+
+0 0 30px #ff5c9d;
+
+animation:heartGlow 3s infinite alternate;
+
+}
+
+
+
+.ending h3 {
+
+font-size:35px;
+
+color:#ffd1e8;
+
+}
+
+
+
+.ending button {
+
+margin-top:40px;
+
+padding:18px 45px;
+
+border-radius:50px;
+
+border:2px solid #ff8fc1;
+
+background:rgba(255,100,170,0.25);
+
+color:white;
+
+font-size:20px;
+
+cursor:pointer;
+
+transition:0.5s;
+
+box-shadow:
+
+0 0 25px rgba(255,100,170,0.5);
+
+}
+
+
+
+.ending button:hover {
+
+transform:scale(1.1);
+
+box-shadow:
+
+0 0 50px rgba(255,100,170,1);
+
+}
+
+
+
+@keyframes heartGlow {
+
+
+from {
+
+text-shadow:
+
+0 0 20px #ff5c9d;
+
+}
+
+
+to {
+
+text-shadow:
+
+0 0 60px #ffb6d9;
+
+}
+
+}
+
+
+
+@keyframes finalAppear {
+
+
+from {
+
+opacity:0;
+
+transform:translateY(100px);
+
+}
+
+
+to {
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
