@@ -337,3 +337,16 @@ else{
 }
 
 }
+// Povratak na početak ❤️
+
+function goTop(){
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+}
