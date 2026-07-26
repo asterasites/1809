@@ -772,3 +772,44 @@ transform:scale(1);
 
 
 }
+/* Lepo polje za lozinku 🔒❤️ */
+
+
+.album input {
+
+background:rgba(255,255,255,0.12);
+
+border:2px solid rgba(255,150,200,0.5);
+
+color:white;
+
+outline:none;
+
+backdrop-filter:blur(10px);
+
+box-shadow:
+0 0 20px rgba(255,100,170,0.4);
+
+transition:0.4s;
+
+}
+
+
+.album input::placeholder {
+
+color:#ffd1e8;
+
+}
+
+
+
+.album input:focus {
+
+transform:scale(1.05);
+
+box-shadow:
+0 0 35px rgba(255,100,170,0.8);
+
+border-color:#ff8fc1;
+
+}
