@@ -313,3 +313,27 @@ message.innerHTML="❌ Pogrešna lozinka";
 
 
 }
+function openAlbum(){
+
+let password = document.getElementById("albumPassword").value;
+
+let gallery = document.getElementById("gallery");
+
+let message = document.getElementById("wrongPassword");
+
+
+if(password === "1809mojesve"){
+
+    gallery.classList.remove("locked");
+    gallery.classList.add("unlocked");
+
+    message.innerHTML="❤️ Album otključan ❤️";
+
+}
+else{
+
+    message.innerHTML="❌ Pogrešna lozinka";
+
+}
+
+}
