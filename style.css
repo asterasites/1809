@@ -1,0 +1,696 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Georgia", serif;
+}
+
+body {
+    background: radial-gradient(circle at top, #24104f, #050510 70%);
+    color: white;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+
+/* zvezde pozadina */
+
+.stars {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image:
+    radial-gradient(white 1px, transparent 1px),
+    radial-gradient(#ffffff 1px, transparent 1px);
+
+    background-size: 80px 80px, 120px 120px;
+    background-position: 0 0, 40px 40px;
+    opacity: 0.4;
+    animation: moveStars 60s linear infinite;
+    z-index: -1;
+}
+
+
+@keyframes moveStars {
+
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-500px);
+    }
+
+}
+
+
+/* naslov */
+
+header {
+
+    text-align: center;
+    padding: 100px 20px;
+
+}
+
+
+header h1 {
+
+    font-size: 55px;
+    color: #ff6fae;
+    text-shadow: 0 0 20px #ff2f92;
+
+}
+
+
+header h2 {
+
+    margin-top: 20px;
+    font-size: 35px;
+    color: #ffd1e8;
+
+}
+
+
+header p {
+
+    margin-top: 20px;
+    font-size: 22px;
+
+}
+
+
+
+/* sekcije */
+
+section {
+
+    width: 85%;
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 40px;
+
+    background: rgba(255,255,255,0.08);
+
+    border-radius: 25px;
+
+    backdrop-filter: blur(10px);
+
+    box-shadow:
+    0 0 30px rgba(255,100,170,0.25);
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    animation: fade 2s;
+
+}
+
+
+
+section h2 {
+
+    text-align: center;
+    color:#ff9fc8;
+    font-size:35px;
+    margin-bottom:30px;
+
+}
+
+
+
+section p {
+
+    font-size:20px;
+    line-height:1.9;
+    text-align:center;
+    color:#f8f8f8;
+    margin-bottom:25px;
+
+}
+
+
+
+/* efekat pojavljivanja */
+
+
+@keyframes fade {
+
+from {
+
+opacity:0;
+transform:translateY(50px);
+
+}
+
+to {
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+
+/* srce u footeru */
+
+footer {
+
+text-align:center;
+padding:50px;
+font-size:25px;
+color:#ff8fbd;
+
+}
+
+
+/* mala srca koja svetle */
+
+body::before {
+
+content:"❤️";
+position:fixed;
+font-size:80px;
+left:50%;
+top:50%;
+transform:translate(-50%,-50%);
+opacity:0.05;
+animation:pulse 3s infinite;
+
+}
+
+
+
+@keyframes pulse {
+
+0% {
+
+transform:translate(-50%,-50%) scale(1);
+
+}
+
+50% {
+
+transform:translate(-50%,-50%) scale(1.3);
+
+}
+
+100% {
+
+transform:translate(-50%,-50%) scale(1);
+
+}
+
+}
+
+
+/* telefon */
+
+@media(max-width:700px){
+
+header h1 {
+
+font-size:38px;
+
+}
+
+
+section {
+
+width:92%;
+padding:25px;
+
+}
+
+
+section p {
+
+font-size:17px;
+
+}
+
+}
+/* Brojač vremena */
+
+.counter {
+
+text-align:center;
+
+}
+
+
+#timer {
+
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin-top:30px;
+
+}
+
+
+#timer div {
+
+background:rgba(255,255,255,0.12);
+
+padding:25px;
+
+border-radius:20px;
+
+min-width:130px;
+
+font-size:18px;
+
+box-shadow:0 0 20px rgba(255,100,170,0.3);
+
+}
+
+
+#timer span {
+
+display:block;
+
+font-size:45px;
+
+color:#ff8fc1;
+
+font-weight:bold;
+
+margin-bottom:10px;
+
+}
+/* Elegantna slova M + E u pozadini ❤️ */
+
+body::after {
+
+content:"M + E";
+
+position:fixed;
+
+top:50%;
+left:50%;
+
+transform:translate(-50%,-50%) rotate(-15deg);
+
+font-family:"Brush Script MT", "Segoe Script", cursive;
+
+font-size:350px;
+
+font-weight:bold;
+
+color:rgba(255,120,180,0.08);
+
+letter-spacing:20px;
+
+z-index:-2;
+
+pointer-events:none;
+
+text-shadow:
+0 0 30px rgba(255,100,180,0.3),
+0 0 60px rgba(255,100,180,0.2);
+
+animation: glowLetters 5s infinite alternate;
+
+}
+
+
+/* blago pulsiranje slova */
+
+@keyframes glowLetters {
+
+from {
+
+opacity:0.4;
+
+transform:translate(-50%,-50%) rotate(-15deg) scale(1);
+
+}
+
+
+to {
+
+opacity:0.8;
+
+transform:translate(-50%,-50%) rotate(-15deg) scale(1.05);
+
+}
+
+}
+/* Dugme kada ti je tesko ❤️ */
+
+.hard-times {
+
+text-align:center;
+
+}
+
+
+.hard-times button {
+
+margin-top:30px;
+
+padding:18px 35px;
+
+font-size:20px;
+
+border:none;
+
+border-radius:50px;
+
+background:#ff5c9d;
+
+color:white;
+
+cursor:pointer;
+
+box-shadow:0 0 25px rgba(255,80,150,0.6);
+
+transition:0.4s;
+
+}
+
+
+.hard-times button:hover {
+
+transform:scale(1.1);
+
+box-shadow:0 0 40px rgba(255,80,150,1);
+
+}
+
+
+
+#hiddenMessage {
+
+display:none;
+
+margin-top:40px;
+
+padding:30px;
+
+background:rgba(255,255,255,0.1);
+
+border-radius:25px;
+
+animation:openLetter 1s;
+
+}
+
+
+
+@keyframes openLetter {
+
+from {
+
+opacity:0;
+
+transform:scale(0.8);
+
+}
+
+to {
+
+opacity:1;
+
+transform:scale(1);
+
+}
+
+}
+/* Koverta ljubavi 💌 */
+
+
+.envelope {
+
+width:320px;
+
+height:220px;
+
+background:#ff6fae;
+
+margin:40px auto;
+
+position:relative;
+
+cursor:pointer;
+
+border-radius:10px;
+
+box-shadow:
+0 0 30px rgba(255,100,170,0.5);
+
+overflow:hidden;
+
+transition:0.5s;
+
+}
+
+
+
+.envelope:hover {
+
+transform:scale(1.05);
+
+}
+
+
+
+/* trougao koji se otvara */
+
+.flap {
+
+position:absolute;
+
+top:0;
+
+left:0;
+
+width:0;
+
+height:0;
+
+border-left:160px solid transparent;
+
+border-right:160px solid transparent;
+
+border-top:120px solid #ff9fc8;
+
+transform-origin:top;
+
+transition:1s;
+
+z-index:3;
+
+}
+
+
+
+
+.letter {
+
+position:absolute;
+
+background:white;
+
+color:#444;
+
+width:280px;
+
+height:190px;
+
+left:20px;
+
+top:25px;
+
+padding:20px;
+
+border-radius:10px;
+
+overflow:auto;
+
+transition:1s;
+
+z-index:2;
+
+transform:translateY(120px);
+
+opacity:0;
+
+}
+
+
+
+.letter p {
+
+font-size:15px;
+
+line-height:1.6;
+
+text-align:center;
+
+}
+
+
+
+.envelope.open .flap {
+
+transform:rotateX(180deg);
+
+}
+
+
+
+.envelope.open .letter {
+
+transform:translateY(-60px);
+
+opacity:1;
+
+}
+
+
+
+.click-text {
+
+color:#ffb0d0;
+
+font-size:20px;
+
+}
+/* Dugme za muziku 🎵 */
+
+
+.music {
+
+text-align:center;
+
+}
+
+
+.music button {
+
+margin-top:25px;
+
+padding:18px 40px;
+
+border:none;
+
+border-radius:50px;
+
+font-size:20px;
+
+background:#ff5c9d;
+
+color:white;
+
+cursor:pointer;
+
+box-shadow:0 0 25px rgba(255,90,160,0.6);
+
+transition:0.4s;
+
+}
+
+
+.music button:hover {
+
+transform:scale(1.1);
+
+box-shadow:0 0 45px rgba(255,90,160,1);
+
+}
+/* Muzika efekti 🎵❤️ */
+
+
+.music-area {
+
+position:relative;
+
+height:250px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+
+
+#musicButton {
+
+position:relative;
+
+z-index:5;
+
+}
+
+
+
+.note,
+.date {
+
+position:absolute;
+
+font-size:35px;
+
+animation:fly 5s linear infinite;
+
+pointer-events:none;
+
+}
+
+
+
+.note {
+
+color:#ff9fc8;
+
+}
+
+
+
+.date {
+
+color:#ffd1e8;
+
+font-size:28px;
+
+font-weight:bold;
+
+}
+
+
+
+@keyframes fly {
+
+
+0% {
+
+transform:translateY(80px) rotate(0deg);
+
+opacity:0;
+
+}
+
+
+20% {
+
+opacity:1;
+
+}
+
+
+100% {
+
+transform:translateY(-250px) rotate(360deg);
+
+opacity:0;
+
+}
+
+
+}
