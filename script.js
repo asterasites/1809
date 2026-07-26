@@ -274,9 +274,6 @@ item.remove();
 
 
 }
-// Album sa lozinkom ❤️📸
-
-
 function openAlbum(){
 
 
@@ -296,9 +293,12 @@ document.getElementById("wrongPassword");
 if(password === "1809mojesve"){
 
 
-gallery.style.display="flex";
+gallery.classList.remove("locked");
 
-message.innerHTML="❤️ Album otvoren ❤️";
+gallery.classList.add("unlocked");
+
+
+message.innerHTML="❤️ Album otključan ❤️";
 
 
 }
@@ -313,19 +313,3 @@ message.innerHTML="❌ Pogrešna lozinka";
 
 
 }
-
-
-
-// Sakrivanje slika koje ne postoje
-
-document.querySelectorAll("#gallery img").forEach(img=>{
-
-
-img.onerror=function(){
-
-this.style.display="none";
-
-};
-
-
-});
