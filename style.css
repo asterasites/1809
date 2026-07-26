@@ -775,25 +775,91 @@ transform:scale(1);
 /* Lepo polje za lozinku 🔒❤️ */
 
 
+/* Animirano polje za lozinku 🔒❤️ */
+
 .album input {
+
+width:350px;
+
+height:65px;
+
+padding:0 30px;
+
+border-radius:50px;
+
+border:2px solid rgba(255,150,200,0.7);
 
 background:rgba(255,255,255,0.12);
 
-border:2px solid rgba(255,150,200,0.5);
-
 color:white;
+
+font-size:22px;
+
+text-align:center;
 
 outline:none;
 
-backdrop-filter:blur(10px);
+backdrop-filter:blur(15px);
 
 box-shadow:
-0 0 20px rgba(255,100,170,0.4);
+0 0 20px rgba(255,100,170,0.5),
+inset 0 0 20px rgba(255,255,255,0.1);
 
-transition:0.4s;
+transition:0.5s;
+
+animation:passwordGlow 3s infinite alternate;
 
 }
 
+
+/* tekst kada se kuca */
+
+.album input::placeholder {
+
+color:#ffd1e8;
+
+font-size:18px;
+
+}
+
+
+
+/* efekat kada klikneš */
+
+.album input:focus {
+
+transform:scale(1.08);
+
+border-color:#ffb6d9;
+
+box-shadow:
+0 0 40px rgba(255,100,170,1);
+
+}
+
+
+/* nežno pulsiranje */
+
+@keyframes passwordGlow {
+
+
+from {
+
+box-shadow:
+0 0 15px rgba(255,100,170,0.4);
+
+}
+
+
+to {
+
+box-shadow:
+0 0 45px rgba(255,100,170,0.9);
+
+}
+
+
+}
 
 .album input::placeholder {
 
