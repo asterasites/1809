@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="sr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#151019">
+  <meta name="description" content="1809 — naš privatni svet">
+  <link rel="manifest" href="app-manifest.json">
+  <link rel="stylesheet" href="app.css">
+  <title>1809 — Naš privatni svet</title>
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <a class="brand" href="app.html" aria-label="1809 početna">1809<span>♥</span></a>
+      <button id="logoutBtn" class="quiet hidden" type="button">Odjavi se</button>
+    </header>
+
+    <section id="loginView" class="login-view">
+      <p class="eyebrow">OUR PRIVATE WORLD</p>
+      <h1>Dobro došli<br>u naš svet.</h1>
+      <p class="muted">Mesto koje pripada samo nama.</p>
+      <form id="loginForm" class="panel login-form">
+        <label for="email">Email adresa</label>
+        <input id="email" type="email" autocomplete="username" required placeholder="Unesi email">
+        <label for="password">Lozinka</label>
+        <input id="password" type="password" autocomplete="current-password" required placeholder="Unesi lozinku">
+        <button class="primary" type="submit">Uđi u naš svet <span>→</span></button>
+        <p id="loginMessage" class="message" role="status"></p>
+      </form>
+      <p class="tiny">Privatan prostor za dvoje <span>♥</span></p>
+    </section>
+
+    <section id="homeView" class="hidden">
+      <div class="welcome">
+        <p class="eyebrow">ONLY US · 1809</p>
+        <h1>Naš mali<br><em>univerzum.</em></h1>
+        <p class="muted">Lepo je što si ovde. ♥</p>
+      </div>
+
+      <div class="tiles">
+        <a class="tile" href="chat.html"><span class="tile-icon">✉</span><span><b>Naš chat</b><small>Naše privatne poruke</small></span><i>↗</i></a>
+        <a class="tile" href="letters.html"><span class="tile-icon">♡</span><span><b>Ljubavna pisma</b><small>Reči koje ostaju</small></span><i>↗</i></a>
+        <a class="tile" href="game.html"><span class="tile-icon">✧</span><span><b>Naše igrice</b><small>Kvizovi i izazovi</small></span><i>↗</i></a>
+        <a class="tile" href="memories.html"><span class="tile-icon">▧</span><span><b>Uspomene</b><small>Naši posebni trenuci</small></span><i>↗</i></a>
+      </div>
+      <div class="quote panel">
+        <span class="quote-mark">“</span>
+        <p>Neka neka mesta na svetu budu samo naša.</p>
+        <small>1809 · SAMO NAŠE</small>
+      </div>
+      <footer>NAPRAVLJENO SA ♥ ZA NAS DVOJE</footer>
+    </section>
+  </main>
+  <script src="https://www.gstatic.com/firebasejs/13.1.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/13.1.0/firebase-auth-compat.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

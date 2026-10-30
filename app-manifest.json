@@ -1,0 +1,11 @@
+{
+  "name": "1809 — Naš privatni svet",
+  "short_name": "1809",
+  "description": "Privatna aplikacija za dvoje",
+  "start_url": "./app.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#151019",
+  "theme_color": "#151019",
+  "icons": []
+}
