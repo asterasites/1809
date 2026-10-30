@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Naše poruke ❤️</title>
+  <link rel="stylesheet" href="chat.css">
+</head>
+<body>
+
+  <main class="app">
+    <header>
+      <h1>💌 Naše poruke</h1>
+      <p>Samo naše malo mesto ❤️</p>
+    </header>
+
+    <section id="login">
+      <h2>Prijava ❤️</h2>
+      <input id="email" type="email" placeholder="Email adresa">
+      <input id="password" type="password" placeholder="Lozinka">
+      <button id="loginButton">Prijavi se</button>
+      <p id="loginError"></p>
+    </section>
+
+    <section id="chat" hidden>
+      <div class="chat-header">
+        <span>Ti ❤️ Ona</span>
+        <button id="logoutButton">Odjava</button>
+      </div>
+
+      <div id="messages"></div>
+
+      <form id="messageForm">
+        <input id="messageInput" maxlength="2000"
+          placeholder="Napiši poruku..." autocomplete="off">
+        <button type="submit">➤</button>
+      </form>
+      <p id="chatError"></p>
+    </section>
+
+    <a href="index.html" class="back">← Nazad na našu priču</a>
+  </main>
+
+  <script type="module" src="chat.js"></script>
+</body>
+</html>
