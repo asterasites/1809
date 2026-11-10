@@ -1299,3 +1299,155 @@ transform:translateY(0);
   transform: scale(1.06);
   background: #e9367c;
 }
+/* DNEVNE LJUBAVNE KOVERTE */
+
+.daily-letters {
+    padding: 65px 20px;
+    text-align: center;
+}
+
+.daily-subtitle {
+    color: #e8a4c2;
+    letter-spacing: 4px;
+    font-size: 11px;
+}
+
+.daily-letters h2 {
+    color: #f4c5d9;
+    font-size: 28px;
+    margin: 12px 0;
+}
+
+.daily-description {
+    color: #d0bdc9;
+    line-height: 1.7;
+    max-width: 420px;
+    margin: 0 auto 30px;
+}
+
+.envelope-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 650px;
+    margin: auto;
+}
+
+.envelope-card {
+    width: 250px;
+    min-height: 210px;
+    padding: 25px 15px;
+    border: 1px solid #70465e;
+    border-radius: 18px;
+    background: linear-gradient(145deg, #251823, #120e15);
+    color: white;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    transition: .3s;
+    box-shadow: 0 10px 30px #0005;
+}
+
+.envelope-card:not(:disabled):hover {
+    transform: translateY(-7px);
+    border-color: #e8a4c2;
+    box-shadow: 0 12px 35px #d77ba333;
+}
+
+.envelope-icon {
+    font-size: 48px;
+}
+
+.envelope-card strong {
+    color: #f3bfd5;
+    font-size: 20px;
+}
+
+.envelope-card small {
+    color: #c8b5c3;
+    font-size: 12px;
+}
+
+.envelope-time {
+    color: #e5a4c1;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+.envelope-card.is-locked {
+    opacity: .45;
+    filter: grayscale(.7);
+    cursor: not-allowed;
+}
+
+.daily-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    background: rgba(0,0,0,.88);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    backdrop-filter: blur(9px);
+}
+
+.daily-modal.hidden {
+    display: none;
+}
+
+.daily-message-box {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    padding: 45px 25px 30px;
+    text-align: center;
+    border: 1px solid #88536f;
+    border-radius: 22px;
+    background: linear-gradient(145deg, #2d1d2c, #130e16);
+    box-shadow: 0 0 50px #d77ba322;
+    animation: letterAppear .35s ease;
+}
+
+@keyframes letterAppear {
+    from { opacity: 0; transform: scale(.85); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.daily-close {
+    position: absolute;
+    top: 12px;
+    right: 17px;
+    border: none;
+    background: none;
+    color: #f1c1d7;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.daily-modal-heart {
+    color: #eaa3c2;
+    font-size: 48px;
+}
+
+.daily-message-box h2 {
+    color: #f4c3d8;
+    margin: 12px 0 20px;
+}
+
+.daily-message-box p {
+    color: #fff0f7;
+    font-size: 19px;
+    line-height: 1.8;
+}
+
+.daily-modal-footer {
+    margin-top: 30px;
+    color: #d995b4;
+    font-size: 10px;
+    letter-spacing: 3px;
+}
