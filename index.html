@@ -170,7 +170,44 @@ A ta priča si ti.
 
 </section>
 
+<section class="daily-letters">
 
+    <p class="daily-subtitle">MALO LJUBAVI ZA SVAKI DAN</p>
+    <h2>💌 Naše dnevne poruke</h2>
+    <p class="daily-description">
+        Jedna poruka za početak dana, jedna za njegov kraj.
+        Samo za tebe. ❤️
+    </p>
+
+    <div class="envelope-container">
+
+        <button class="envelope-card" id="morningEnvelope" type="button">
+            <span class="envelope-icon">✉️</span>
+            <strong>Dobro jutro</strong>
+            <small id="morningStatus">Otvara se u 06:00</small>
+            <span class="envelope-time">06:00 – 22:40</span>
+        </button>
+
+        <button class="envelope-card" id="nightEnvelope" type="button">
+            <span class="envelope-icon">💌</span>
+            <strong>Laku noć</strong>
+            <small id="nightStatus">Otvara se u 22:40</small>
+            <span class="envelope-time">22:40 – 00:00</span>
+        </button>
+
+    </div>
+
+</section>
+
+<div id="dailyMessageModal" class="daily-modal hidden" aria-hidden="true">
+    <div class="daily-message-box">
+        <button id="closeDailyMessage" class="daily-close" type="button">×</button>
+        <div class="daily-modal-heart">♡</div>
+        <h2 id="dailyMessageTitle">Za tebe ❤️</h2>
+        <p id="dailyMessageText"></p>
+        <div class="daily-modal-footer">SAMO NAŠE · M ❤️ E</div>
+    </div>
+</div>
 <section class="counter">
 
 <h2>⏳ Naše vreme zajedno ❤️</h2>
